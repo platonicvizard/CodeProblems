@@ -1,0 +1,121 @@
+Statistical profiling result from isolate-00000193D739DAD0-v8.log, (163 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     93   57.1%          C:\Program Files\nodejs\node.exe
+     50   30.7%          C:\WINDOWS\SYSTEM32\ntdll.dll
+     19   11.7%          C:\WINDOWS\System32\KERNEL32.DLL
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.6%  100.0%  Builtin: AdaptorWithExitFrame
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      1    0.6%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+      2    1.2%  200.0%  GC
+    162   99.4%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     93   57.1%  C:\Program Files\nodejs\node.exe
+     81   87.1%    C:\Program Files\nodejs\node.exe
+     44   54.3%      LazyCompile: ~Resolver dns.js:245:14
+     44  100.0%        Script: ~<anonymous> dns.js:1:11
+     44  100.0%          LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+     44  100.0%            LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+     19   23.5%      LazyCompile: ~runInThisContext bootstrap_node.js:499:28
+     19  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+     19  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+      4   21.1%            Script: ~<anonymous> module.js:1:11
+      2   10.5%            Script: ~<anonymous> util.js:1:11
+      2   10.5%            Script: ~<anonymous> tty.js:1:11
+      2   10.5%            Script: ~<anonymous> stream.js:1:11
+      1    5.3%            Script: ~<anonymous> timers.js:1:11
+      1    5.3%            Script: ~<anonymous> readline.js:1:11
+      1    5.3%            Script: ~<anonymous> net.js:1:11
+      1    5.3%            Script: ~<anonymous> internal/loader/ModuleRequest.js:1:11
+      1    5.3%            Script: ~<anonymous> internal/loader/Loader.js:1:11
+      1    5.3%            Script: ~<anonymous> fs.js:1:11
+      1    5.3%            LazyCompile: ~startup bootstrap_node.js:12:19
+      1    5.3%            LazyCompile: ~setupGlobalVariables bootstrap_node.js:255:32
+      1    5.3%            LazyCompile: ~setupGlobalConsole bootstrap_node.js:310:30
+      3    3.7%      LazyCompile: ~startup bootstrap_node.js:12:19
+      3  100.0%        Script: ~<anonymous> bootstrap_node.js:10:10
+      1    1.2%      Script: ~<anonymous> util.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+      1  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+      1  100.0%            LazyCompile: ~setupGlobalVariables bootstrap_node.js:255:32
+      1    1.2%      Script: ~<anonymous> internal/util.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+      1  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+      1  100.0%            Script: ~<anonymous> internal/encoding.js:1:11
+      1    1.2%      Script: ~<anonymous> internal/url.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+      1  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+      1  100.0%            Script: ~<anonymous> module.js:1:11
+      1    1.2%      Script: ~<anonymous> internal/errors.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+      1  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+      1  100.0%            Script: ~<anonymous> util.js:1:11
+      1    1.2%      Script: ~<anonymous> console.js:1:11
+      1  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+      1  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+      1  100.0%            LazyCompile: ~setupGlobalConsole bootstrap_node.js:310:30
+      1    1.2%      Script: ~<anonymous> bootstrap_node.js:10:10
+      1    1.2%      LazyCompile: ~setupProcessFatal bootstrap_node.js:358:29
+      1  100.0%        LazyCompile: ~startup bootstrap_node.js:12:19
+      1  100.0%          Script: ~<anonymous> bootstrap_node.js:10:10
+      1    1.2%      LazyCompile: ~fs.openSync fs.js:642:23
+      1  100.0%        LazyCompile: ~fs.readFileSync fs.js:548:27
+      1  100.0%          LazyCompile: ~Module._extensions..js module.js:661:37
+      1  100.0%            LazyCompile: ~Module.load module.js:556:33
+      1    1.2%      LazyCompile: ~formatValue util.js:362:21
+      1  100.0%        LazyCompile: ~inspect util.js:260:17
+      1  100.0%          LazyCompile: ~format util.js:152:16
+      1  100.0%            LazyCompile: ~log console.js:127:37
+      1    1.2%      LazyCompile: ~createWriteReq net.js:786:24
+      1  100.0%        LazyCompile: ~Socket._writeGeneric net.js:711:42
+      1  100.0%          LazyCompile: ~Socket._write net.js:782:35
+      1  100.0%            LazyCompile: ~doWrite _stream_writable.js:389:17
+      1    1.2%      LazyCompile: ~Socket._writeGeneric net.js:711:42
+      1  100.0%        LazyCompile: ~Socket._write net.js:782:35
+      1  100.0%          LazyCompile: ~doWrite _stream_writable.js:389:17
+      1  100.0%            LazyCompile: ~writeOrBuffer _stream_writable.js:349:23
+      1    1.2%      LazyCompile: ~Socket net.js:185:16
+      1  100.0%        LazyCompile: ~WriteStream tty.js:64:21
+      1  100.0%          LazyCompile: ~createWritableStdioStream internal/process/stdio.js:142:35
+      1  100.0%            LazyCompile: ~getStdout internal/process/stdio.js:12:21
+      1    1.2%      LazyCompile: ~ReadableState _stream_readable.js:58:23
+      1  100.0%        LazyCompile: ~Readable _stream_readable.js:140:18
+      1  100.0%          LazyCompile: ~Duplex _stream_duplex.js:47:16
+      1  100.0%            LazyCompile: ~Socket net.js:185:16
+      1    1.2%      LazyCompile: ~Performance perf_hooks.js:382:14
+      1  100.0%        Script: ~<anonymous> perf_hooks.js:1:11
+      1  100.0%          LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+      1  100.0%            LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+      1    1.2%      LazyCompile: ~Module._load module.js:448:24
+      1  100.0%        LazyCompile: ~Module.runMain module.js:691:26
+      1  100.0%          LazyCompile: ~startup bootstrap_node.js:12:19
+      1  100.0%            Script: ~<anonymous> bootstrap_node.js:10:10
+
+     50   30.7%  C:\WINDOWS\SYSTEM32\ntdll.dll
+      1    2.0%    C:\Program Files\nodejs\node.exe
+      1  100.0%      LazyCompile: ~realpathSync fs.js:1579:40
+      1  100.0%        LazyCompile: ~toRealPath module.js:163:20
+      1  100.0%          LazyCompile: ~Module._findPath module.js:182:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename module.js:514:35
+
+     19   11.7%  C:\WINDOWS\System32\KERNEL32.DLL
+

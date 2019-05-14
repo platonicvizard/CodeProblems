@@ -7,8 +7,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}\\findIndicesOfTwoSums\\index.js"
+            "name": "Launch Memory Program",
+            "program": "${workspaceFolder}\\findIndicesOfTwoSums\\memory.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "args": ["--prof"],
+            "name": "Launch Speed Program",
+            "program": "${workspaceFolder}\\findIndicesOfTwoSums\\speed.js"
         }
     ]
 }

@@ -1,3 +1,5 @@
+console.time('findIndicesOfTwoSums');
+
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -34,3 +36,11 @@ function findIndicesOfTwoSums(nums, target) {
 var result = findIndicesOfTwoSums([3, 2, 3], 6); //[2, 7, 11, 15],9);//[3, 2, 4], 6);
 
 console.log(result);
+
+
+console.timeEnd('findIndicesOfTwoSums');
+
+const used = process.memoryUsage();
+for (let key in used) {
+  console.log(`${key} ${Math.round(used[key] / 1024 / 1024 * 100) / 100} MB`);
+}
